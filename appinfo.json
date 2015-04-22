@@ -1,26 +1,24 @@
 {
     "appKeys": {
-        "KEY_CONDITIONS": 1,
-        "KEY_REQUEST_TYPE": 0,
-        "KEY_TEMPERATURE": 2,
-        "KEY_TRAIN_1": 3,
-        "KEY_TRAIN_2": 4
+        "KEY_STATION": 0,
+        "KEY_TARDINESS": 2,
+        "KEY_TIME": 1
     },
     "capabilities": [
         "location"
     ],
-    "companyName": "Jeremy Henderson",
-    "longName": "SEPTA Watch Face",
+    "companyName": "jeremy.henderson@gmail.com",
+    "longName": "Next Train - SEPTA",
     "projectType": "native",
     "resources": {
         "media": []
     },
     "sdkVersion": "2",
-    "shortName": "SEPTA Watch Face",
-    "uuid": "0ab34269-5acd-4014-bd8f-cea498a214fb",
+    "shortName": "Next Train - SEPTA",
+    "uuid": "4f45e504-1667-408d-b870-9584a0a26764",
     "versionCode": 1,
     "versionLabel": "1.0",
     "watchapp": {
-        "watchface": true
+        "watchface": false
     }
 }
