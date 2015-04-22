@@ -1,5 +1,5 @@
 var RADIUS = 1.0; //Miles
-var DEBUG_ON_PC = false;
+var DEBUG_ON_PC = true;
 
 var Stations = {"stations" : [
   {"name": "Secane", "lookup_name": "Secane", "lat": "39.91574", "long": "-75.30986"},
@@ -42,7 +42,6 @@ function locationSuccess(pos) {
       function(responseText) {
         // responseText contains a JSON object with train info
         try {
-          
           var json = JSON.parse(responseText);
           
           /*
@@ -55,6 +54,7 @@ function locationSuccess(pos) {
           var conditions = json.weather[0].main;      
           console.log('Conditions are ' + conditions);
           */
+  
           // Assemble dictionary using our keys
           var dictionary = {
             'KEY_STATION': station.name,
@@ -80,20 +80,21 @@ function locationSuccess(pos) {
   } 
   else // Out of septa station range send that note back.
   {
-          var dictionary = {
-            'KEY_STATION': "Out of Range",
-            'KEY_TIME': "",
-            'KEY_TARDINESS': ""
-          };
-            // Send to Pebble
-          Pebble.sendAppMessage(dictionary,
-            function(e) {
-              console.log('Train info sent to Pebble successfully!');
-            },
-            function(e) {
-              console.log('Error sending train info to Pebble!');
-            }
-          );
+    // Assemble dictionary using our keys
+    var dictionary = {
+      'KEY_STATION': "Out of Range",
+      'KEY_TIME': "",
+      'KEY_TARDINESS': ""
+    };
+    
+    // Send to Pebble
+    Pebble.sendAppMessage(dictionary,
+    function(e) {
+      console.log('Train info sent to Pebble successfully!');
+    },
+    function(e) {
+      console.log('Error sending train info to Pebble!');
+    } );
   }
 }
 
