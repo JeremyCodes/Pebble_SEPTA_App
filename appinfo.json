@@ -1,0 +1,26 @@
+{
+    "appKeys": {
+        "KEY_CONDITIONS": 1,
+        "KEY_REQUEST_TYPE": 0,
+        "KEY_TEMPERATURE": 2,
+        "KEY_TRAIN_1": 3,
+        "KEY_TRAIN_2": 4
+    },
+    "capabilities": [
+        "location"
+    ],
+    "companyName": "Jeremy Henderson",
+    "longName": "SEPTA Watch Face",
+    "projectType": "native",
+    "resources": {
+        "media": []
+    },
+    "sdkVersion": "2",
+    "shortName": "SEPTA Watch Face",
+    "uuid": "0ab34269-5acd-4014-bd8f-cea498a214fb",
+    "versionCode": 1,
+    "versionLabel": "1.0",
+    "watchapp": {
+        "watchface": true
+    }
+}
